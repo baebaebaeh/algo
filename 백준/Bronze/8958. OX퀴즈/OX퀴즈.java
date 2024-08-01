@@ -15,12 +15,12 @@ public class Main {
 		int L = Integer.parseInt(st.nextToken());
 		for (int i = 0; i < L; i++) {
 			st = new StringTokenizer(br.readLine());
-			char[] arr = st.nextToken().toCharArray();
+			String s = st.nextToken();
 			int j = 0;
 			int ans = 0;
 			int contin = 1;
-			while (j < arr.length) {
-				if (arr[j] == 'O') {
+			while (j < s.length()) {
+				if (s.charAt(j) == 'O') {
 					ans += contin++;
 					j++;
 					continue;
