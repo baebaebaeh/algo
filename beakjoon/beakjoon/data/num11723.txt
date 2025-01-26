@@ -1,0 +1,64 @@
+26
+add 1
+add 2
+check 1
+check 2
+check 3
+remove 2
+check 1
+check 2
+toggle 3
+check 1
+check 2
+check 3
+check 4
+all
+check 10
+check 20
+toggle 10
+remove 20
+check 10
+check 20
+empty
+check 1
+toggle 1
+check 1
+toggle 1
+check 1
+{
+"userId": 101010,
+"portfolioCard": [
+  {
+      "description": "드라마 제작 현장에서 성공적으로 작업을 완료했습니다.",
+      "portfolioImages": [
+            {
+                "portfolioImageUrl": "https://example.com/api/portfolio/image/111222.jpg",
+            },
+            {
+                "portfolioImageId": 111223,
+                "portfolioImageUrl": "https://example.com/api/portfolio/image/111223.jpg",
+            }
+      ],
+      "portfolioYoutube": {
+          "imbedUrl": "https://imbedUrl"
+      }
+  },
+  {
+      "portfolioCardId": 334,
+      "description": "영화 제작 현장에서 감독보조로 일했습니다",
+      "portfolioImages": [
+            {
+                "portfolioImageId": 111222,
+                "portfolioImageUrl": "https://example.com/api/portfolio/image/111222.jpg",
+            },
+            {
+                "portfolioImageId": 111223,
+                "portfolioImageUrl": "https://example.com/api/portfolio/image/111223.jpg",
+            }
+      ],
+      "portfolioYoutube": {
+          "imbedUrl": "https://imbedUrl"
+      }
+  },
+]
+}
