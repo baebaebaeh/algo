@@ -24,6 +24,7 @@ class Main {
         List<Integer> initial = new ArrayList<>();
         for (int i = 0; i < N; i++) {
             initial.add(scanner.nextInt());
+
         }
 
         int result = bfs(N, K, initial);
