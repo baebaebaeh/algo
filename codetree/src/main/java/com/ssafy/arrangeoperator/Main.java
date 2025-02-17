@@ -1,6 +1,7 @@
 package com.ssafy.arrangeoperator;
 
 import java.io.*;
+import java.util.ArrayDeque;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -18,10 +19,9 @@ public class Main {
         3^10 ~= 60000
         브루트 포스 충분히 가능하다고 생각
          */
-
+        String a = " ab";
         n = Integer.parseInt(br.readLine());
         arr = new int[n];
-
         StringTokenizer st = new StringTokenizer(br.readLine());
         for (int iter = 0; iter < n; iter++) {
             arr[iter] = Integer.parseInt(st.nextToken());
