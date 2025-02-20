@@ -26,6 +26,7 @@ public class Main {
         for (int iter = 0; iter < n; iter++) {
             arr[iter] = Integer.parseInt(st.nextToken());
         }
+        
 
         st = new StringTokenizer(br.readLine());
         plus = Integer.parseInt(st.nextToken());

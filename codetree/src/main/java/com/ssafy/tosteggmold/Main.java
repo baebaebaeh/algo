@@ -32,6 +32,7 @@ public class Main {
                 map[row][col] = Integer.parseInt(st.nextToken());
             }
         }
+        
         // 입력 끝
         while (separate) {
             separate = false;
