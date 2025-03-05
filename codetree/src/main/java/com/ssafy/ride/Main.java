@@ -5,7 +5,6 @@ import java.util.*;
 
 public class Main {
     static int n;
-    static int[][][] preferGraph;
     static int[][] preferMap, realMap;
     static int[] order;
     static int[] dr = {-1, 1, 0, 0};
@@ -26,7 +25,6 @@ public class Main {
         for (int i = 0; i < n; i++) {
             Arrays.fill(realMap[i], -1);
         }
-        preferGraph = new int[n][n][n * n];
 
         for (int i = 0; i < n * n; i++) {
             st = new StringTokenizer(br.readLine());
@@ -39,16 +37,20 @@ public class Main {
 
         List<int[]> coords = new ArrayList<>();
         for (int i = 0; i < n * n; i++) {
+            // 순서대로 넣을사람의 index를 뽑는다.
             int nowStudent = order[i];
+            // n * n * 4 * 4
+            // 모든 map의 사방탐색의 사방탐색
+            // 해당 학생이 좋아하는 수가 높은 좌표들을 추출
             coords = findMostPrefer(nowStudent);
+            // 위 좌표들을 사방탐색해 비어있는 좌표가 많은 좌표들을 추출
             coords = findEmpty(coords);
-            
+            // 애초에 행이 낮은 순서, 열이 낮은 순서로 계산했기때문에 0번째가 3번 4번조건에 맞다.
             int[] coord = coords.get(0);
             realMap[coord[0]][coord[1]] = nowStudent;
-            
-            increasePrefer(coord);
-        }
 
+        }
+        // 계산
         int sum = calculate();
         System.out.println(sum);
     }
@@ -85,21 +87,6 @@ public class Main {
             }
         }
         return sum;
-    }
-
-    private static void increasePrefer(int[] coord) {
-        int nowStudent = realMap[coord[0]][coord[1]];
-        for (int j = 0; j < 4; j++) {
-            int nowStudentPrefer = preferMap[nowStudent][j];
-            for (int k = 0; k < 4; k++) {
-                int nextCoordRow = coord[0] + dr[k];
-                int nextCoordCol = coord[1] + dc[k];
-                if (nextCoordRow < 0 || nextCoordRow >= n || nextCoordCol < 0 || nextCoordCol >= n) {
-                    continue;
-                }
-                preferGraph[nextCoordRow][nextCoordCol][nowStudentPrefer]++;
-            }
-        }
     }
 
     private static List<int[]> findEmpty(List<int[]> coords) {
