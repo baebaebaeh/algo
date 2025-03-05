@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.StringTokenizer;
 
 public class Main {
+    
     static int[][] map;
     static boolean[][] visited;
     static int n, L, R, ans = -1;
@@ -26,13 +27,15 @@ public class Main {
         map = new int[n][n];
         visited = new boolean[n][n];
 
+
+
         for (int row = 0; row < n; row++) {
             st = new StringTokenizer(br.readLine());
             for (int col = 0; col < n; col++) {
                 map[row][col] = Integer.parseInt(st.nextToken());
             }
         }
-        
+
         // 입력 끝
         while (separate) {
             separate = false;
