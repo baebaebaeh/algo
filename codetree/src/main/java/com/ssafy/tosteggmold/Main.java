@@ -24,6 +24,7 @@ public class Main {
         L = Integer.parseInt(st.nextToken());
         R = Integer.parseInt(st.nextToken());
 
+        
         map = new int[n][n];
         visited = new boolean[n][n];
 
