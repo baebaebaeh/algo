@@ -88,7 +88,7 @@ public class Main {
                 windup(upStartRow, upStartCol, d);
             }
             map[upStartRow][upStartCol] = 0;
-            
+
 
             for (int iter = 0; iter < n - 1 - downStorm[0] - 1; iter++) {
                 int d = 1;
