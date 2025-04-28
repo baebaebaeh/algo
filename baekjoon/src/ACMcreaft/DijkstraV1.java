@@ -18,7 +18,7 @@ class Node implements Comparable<Node> {
     }
 }
 
-public class Main {
+public class DijkstraV1 {
     static List<List<Node>> graph;
     static List<List<Node>> rgraph;
     static int T, N, K, W;
